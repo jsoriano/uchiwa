@@ -15,6 +15,14 @@
 			"Rev": "215affda49addc4c8ef7e2534915df2c8c35c6cd"
 		},
 		{
+			"ImportPath": "github.com/mavricknz/asn1-ber",
+			"Rev": "ce3c3d1d8e4190a390fc72f551222783cbd6e55a"
+		},
+		{
+			"ImportPath": "github.com/mavricknz/ldap",
+			"Rev": "6638977d26a6bc5ac0d2a9a5dcbefe02c456ea38"
+		},
+		{
 			"ImportPath": "github.com/mitchellh/mapstructure",
 			"Rev": "f7d28d5aeab42b9b95d2e6d6b956f73a290077fc"
 		},

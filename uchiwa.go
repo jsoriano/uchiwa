@@ -8,6 +8,7 @@ import (
 	"github.com/sensu/uchiwa/uchiwa/auth"
 	"github.com/sensu/uchiwa/uchiwa/config"
 	"github.com/sensu/uchiwa/uchiwa/filters"
+	"github.com/sensu/uchiwa/uchiwa/ldap"
 	"github.com/sensu/uchiwa/uchiwa/logger"
 )
 
@@ -28,6 +29,9 @@ func main() {
 	authentication := auth.New()
 	if config.Uchiwa.Auth == "simple" {
 		authentication.Simple(config.Uchiwa.Users)
+	} else if config.Uchiwa.Auth == "ldap" {
+		ldap.Setup(config.Uchiwa.Ldap)
+		authentication.Advanced(ldap.Driver, ldap.DriverName)
 	} else {
 		authentication.None()
 	}
